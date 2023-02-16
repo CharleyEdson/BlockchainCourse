@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "favoriteNumber",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"OneDrive/Blockchain/REmix/Contracts/SimpleStorage.sol": "SimpleStorage"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"OneDrive/Blockchain/REmix/Contracts/SimpleStorage.sol": {
+			"keccak256": "0x3d6dd244536396df6f85e74b101223052dbdee72a97faf869fd22a848d4a2f4b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1b369b87af64401f0ba5331660b10b2df2b02ad002a57c8b66232fd5ad72b1e0",
+				"dweb:/ipfs/QmRdpdF5s4bdARCGWdL6QF4bmba4EVzAf94VWsgu16nrrA"
+			]
+		}
+	},
+	"version": 1
+}
