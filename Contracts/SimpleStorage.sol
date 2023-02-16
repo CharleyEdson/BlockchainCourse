@@ -6,6 +6,9 @@ contract SimpleStorage {
     uint256 favoriteNumber;
     // Ex using variable creation: People public person = People({favoriteNumber: 2, name: "Charley"});
     
+    // mapping
+    mapping(string => uint256) public nameToFavoriteNumber;
+
     // Creating a struct of people. People object.
     struct People {
         uint256 favoriteNumber;
@@ -17,13 +20,15 @@ contract SimpleStorage {
 
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         // 1st way
-        // people.push(People(_favoriteNumber, _name));  
+        people.push(People(_favoriteNumber, _name));  
         //2nd way
         // People memory newPerson = People({favoriteNumber: _favoriteNumber, name: _name});
         // people.push(newPerson);
         //3rd way
-        People memory newPerson = People(_favoriteNumber, _name);
-        people.push(newPerson);
+        //People memory newPerson = People(_favoriteNumber, _name);
+        //people.push(newPerson);
+        nameToFavoriteNumber[_name] = _favoriteNumber;
+
     }
 
     function store(uint256 _favoriteNumber) public {
@@ -39,6 +44,14 @@ contract SimpleStorage {
     function add() public pure returns (uint256) {
         return (1+1);
     }
+
+    //calldata, memory, storage
+    //calldata-only temporarily variables, that can't be modified
+    //storage- permanent variables that can be modified. exist outside function executing
+    //memory - temp variable that can be modified
+    //need to use memory for array, structs, or mapping types
+
+
 
 
 

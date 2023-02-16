@@ -119,7 +119,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/SimpleStorage.sol": "SimpleStorage"
+			"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/ExtraStorage.sol": "ExtraStorage"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -133,6 +133,14 @@
 		"remappings": []
 	},
 	"sources": {
+		"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/ExtraStorage.sol": {
+			"keccak256": "0x7f770dcd98d87c4e40a145123882042ce1c9d7358c7610bf53c69a9cada79e9a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ae6570fae0d3e74c3b74d20918835480b725421e0e6cc987d24b9ce50bdc9b73",
+				"dweb:/ipfs/QmYHjnJ1z8trXtcYQqf3rxjFK8tDt788MT64sKGUF3Lxrz"
+			]
+		},
 		"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/SimpleStorage.sol": {
 			"keccak256": "0x1f2219fe3f97133ae8377b4d2adf3b7262408e64a983acba8d39594cbce2358d",
 			"license": "MIT",
