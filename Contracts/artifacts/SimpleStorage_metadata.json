@@ -7,7 +7,62 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "favoriteNumber",
+				"name": "add",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_favoriteNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favoriteNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieve",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -45,7 +100,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"OneDrive/Blockchain/REmix/Contracts/SimpleStorage.sol": "SimpleStorage"
+			"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/SimpleStorage.sol": "SimpleStorage"
 		},
 		"evmVersion": "london",
 		"libraries": {},
@@ -59,12 +114,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"OneDrive/Blockchain/REmix/Contracts/SimpleStorage.sol": {
-			"keccak256": "0x3d6dd244536396df6f85e74b101223052dbdee72a97faf869fd22a848d4a2f4b",
+		"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/SimpleStorage.sol": {
+			"keccak256": "0xd5ceb09cf4124b7fc749d1b9088d70a32d901768817a0e0204a76ade38fef7f6",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1b369b87af64401f0ba5331660b10b2df2b02ad002a57c8b66232fd5ad72b1e0",
-				"dweb:/ipfs/QmRdpdF5s4bdARCGWdL6QF4bmba4EVzAf94VWsgu16nrrA"
+				"bzz-raw://a63863327d0d50ace9729f74625198f2ad771ead0df25c44d1cb38da94774d9c",
+				"dweb:/ipfs/QmYfm2tqCBzgP1kRxNLnmH9be8386MojrHjFpdFHQfxcyY"
 			]
 		}
 	},
