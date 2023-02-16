@@ -134,11 +134,11 @@
 	},
 	"sources": {
 		"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/SimpleStorage.sol": {
-			"keccak256": "0x1f2219fe3f97133ae8377b4d2adf3b7262408e64a983acba8d39594cbce2358d",
+			"keccak256": "0x088c3e7675678a318e7f4287b442b4b6b3121a818408fc69c153a2a79d578df7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://203bc714faf672bcd342756f1350942b74734e0559bd4a0e03f3f66521a4307d",
-				"dweb:/ipfs/QmVDELdAhZaTcgNWhYjxA4gdXphpqbdvHEz3UCAqPobyg8"
+				"bzz-raw://f9630d802e86278a319c390285193c65ed0d1b7cbd5570c0b3e9ab8deb078e45",
+				"dweb:/ipfs/QmPHjCCF7iEfbjhMPvNtJMxQ5fdBmYM648TEqhfpkEZ9fz"
 			]
 		}
 	},
