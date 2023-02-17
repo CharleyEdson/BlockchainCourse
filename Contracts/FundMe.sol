@@ -3,40 +3,74 @@ pragma solidity ^0.8.7;
 
 // get funds from users
 //
+import "./PriceConverter.sol";
 
-import "@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
+
+// 962,644 gas to create
+// 940,184 gas saved with constant 
+
+error NotOwner();
 
 contract FundMe {
-    
-    uint256 public minimumUsd = 50 * 1e18;
+    using PriceConverter for uint256;
 
-    function fund() public payable{
-// set a min fund amount in USD
-    // 1. How do we send ETH to this contract?
-    require(getConversionRate(msg.value) > minimumUsd, "Didn't send enough.");  // 1e18 = 1 * 10 ** 18;
+    uint256 public constant MINIMUM_USD = 50 * 1e18;
+// 351 - constant
+    address[] public funders;
+    mapping(address => uint256) public addressToAmountFunded;
 
+    address public immutable i_owner;
+
+    constructor(){
+        i_owner = msg.sender;
     }
 
-    function getPrice() public view returns (uint256) {
-        // Goerli ETH / USD Address
-        // https://docs.chain.link/docs/ethereum-addresses/
-        AggregatorV3Interface priceFeed = AggregatorV3Interface(
-            0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e
-        );
-        (, int256 price, , , ) = priceFeed.latestRoundData();
-        // ETH/USD rate in 18 digit
-        return uint256(price * 10000000000);
-        // or (Both will do the same thing)
-        // return uint256(answer * 1e10); // 1* 10 ** 10 == 10000000000
+    function fund() public payable {
+        // set a min fund amount in USD
+        // 1. How do we send ETH to this contract?
+        require(
+            msg.value.getConversionRate() > MINIMUM_USD,
+            "Didn't send enough."
+        ); // 1e18 = 1 * 10 ** 18;
+        funders.push(msg.sender);
+        addressToAmountFunded[msg.sender] += msg.value;
     }
 
-
-
-    function getConversionRate(uint256 ethAmount) public view returns (uint256) {
-        uint256 ethPrice = getPrice();
-        uint256 ethAmountInUsd = (ethPrice * ethAmount) / 1e18;
-        return ethAmountInUsd;
+    function withdraw() public onlyOwner{
+        for (
+            uint256 funderIndex = 0;
+            funderIndex < funders.length;
+            funderIndex++
+        ) {
+            address funder = funders[funderIndex];
+            addressToAmountFunded[funder] = 0;
+        }
+        funders = new address[](0);
+    // transfer-if fail reverts contract. 2300 gas limit
+    //msg.sender = address
+    // payable(msg.sender) = payable address
+    // payable(msg.sender).transfer(address(this).balance);
+    // send returns a boolean. 2300 gas limit
+    // bool sendSuccess = payable(msg.sender).send(address(this).balance);
+    // require(sendSuccess, "send failed");
+    //call no gas limit. forward all gas or set gas, returns bool. lower level.  Don't need the bytes yet.
+    (bool callSuccess, /*bytes memory dataReturned*/) = payable(msg.sender).call{value: address(this).balance}("");
+    require(callSuccess, "Call failed");
+    revert();
     }
 
-    //function withdraw(){}
+    modifier onlyOwner {
+        // require(msg.sender == i_wner, NotOwner());
+        if(msg.sender != i_owner) { revert NotOwner(); }
+        _;
+    }
+    // what happens if someone sends this contract ETH without calling the fund function?
+
+    receive() external payable {
+        fund();
+    }
+    fallback() external payable{
+        fund();
+    }
+
 }

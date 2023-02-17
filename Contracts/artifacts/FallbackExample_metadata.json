@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "result",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/FallbackExample.sol": "FallbackExample"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/FallbackExample.sol": {
+			"keccak256": "0x199afe28f4b7b9f713e8ac44b9f468fc83ae6caf0436a9e3e46a06241f3aad23",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f35efd6ad5c514c6cbbd9bb7264951de5202b7a3ab5d7c7cdd82704846f82eae",
+				"dweb:/ipfs/QmP2dVQ7J9PA25sJNL2aQ7GucEy6QU2M6pMFtDqvEfRaEe"
+			]
+		}
+	},
+	"version": 1
+}

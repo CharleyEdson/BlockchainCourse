@@ -1,0 +1,53 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/PriceConverter.sol": "PriceConverter"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x6e6e4b0835904509406b070ee173b5bc8f677c19421b76be38aea3b1b3d30846",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3beaa37ee61e4ab615e250fbf01601ae481de843fd0ef55e6b44fd9d5fff8a7",
+				"dweb:/ipfs/QmeZUVwd26LzK4Mfp8Zba5JbQNkZFfTzFu1A6FVMMZDg9c"
+			]
+		},
+		"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/PriceConverter.sol": {
+			"keccak256": "0x0a8790e025d74aabdde6db103a99ae07db0025d8fd080cc89c1c8eefd6379874",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6f62fea88c661a6147a6bfdc033de79b9d1dde98639f2f2a43d28fe3f701ecc9",
+				"dweb:/ipfs/QmaXT7RDR2cFt5GzoYcrtmXDDwJywnJcUDuaiA5gd9ioMP"
+			]
+		}
+	},
+	"version": 1
+}
