@@ -13,6 +13,38 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "ethAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "getConversionRate",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "minimumUsd",
 				"outputs": [
@@ -53,12 +85,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/FundMe.sol": {
-			"keccak256": "0x11239d01c401b6e9ec8e9ad23ecf17fbc43e9e222682bb10b161dd6c609b6082",
+		"@chainlink/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x6e6e4b0835904509406b070ee173b5bc8f677c19421b76be38aea3b1b3d30846",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://73cce91136eb4d39717d2098f9afb2ecf003ddb55aa23f65fc9af6a2c217fb9f",
-				"dweb:/ipfs/Qmd9ScMXqbXwa6ecvp2pnfMvNeqYfHtDjZ8719Ah3Qgwvo"
+				"bzz-raw://b3beaa37ee61e4ab615e250fbf01601ae481de843fd0ef55e6b44fd9d5fff8a7",
+				"dweb:/ipfs/QmeZUVwd26LzK4Mfp8Zba5JbQNkZFfTzFu1A6FVMMZDg9c"
+			]
+		},
+		"OneDrive/Blockchain/REmix/BlockchainCourse/Contracts/FundMe.sol": {
+			"keccak256": "0xe78f87e6afbeb0d503895119afb478b14ebd2f22846a459d3adc346803837731",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://2e773f5cc7df4d3bb2afbe4e95fee0f99e82b8483ad8438a8bd5667aa65f4751",
+				"dweb:/ipfs/QmVskbyDSKnFcqBQt4dDXqxkoTRfbXCiYiFd3jvxqXxWee"
 			]
 		}
 	},
